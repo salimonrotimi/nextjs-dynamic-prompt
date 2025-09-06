@@ -1,0 +1,132 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px auto -25px;
+    padding: 2px 5px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.profile-description {
+    width: 100%;
+    max-width: 90%;
+    text-align: center;
+    color: rgb(60, 77, 108);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.profile-image-container {
+    position: relative;
+    /* added since one of its child (i.e. .profile-overlay) has a position of "absolute" */
+    width: 100px;
+    /* max-width and max-height can be used since position is "relative". But width and height are used 
+    here since the sizes are small */
+    height: 100px;
+    background-color: gray;
+    border: 5px solid rgb(144, 144, 144);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.profile-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* top left right bottom  with the border radius create a circle that fill the entire image container */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.profile-expand-icon {
+    opacity: 0;
+    /* i.e. transparent */
+    transition: opacity 0.3s ease;
+}
+
+.profile-image-container:hover .profile-image {
+    transform: scale(1.05);
+}
+
+.profile-image-container:hover .profile-overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    /* transition the background-color to this when the profile-image-container is hovered on */
+}
+
+.profile-image-container:hover .profile-expand-icon {
+    opacity: 1;
+}
+
+.profile h1 {
+    width: 100%;
+    max-width: 90%;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(140, 1, 1);
+    font-weight: 800;
+    font-family: "Roboto";
+}
+
+.profile-recent {
+    margin-top: 40px;
+    text-align: center;
+    font: 600 20px "Roboto";
+    color: rgb(71, 71, 71);
+}
+
+.promptcard-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 90%;
+}
+
+@media (max-width: 1400px) {
+    .promptcard-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 1100px) {
+    .promptcard-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 680px) {
+    .promptcard-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .profile-recent {
+        color: white;
+    }
+    .profile h1 {
+        color: rgb(241, 68, 0);
+    }
+    .profile-description {
+        color: rgb(137, 192, 227);
+    }
+}

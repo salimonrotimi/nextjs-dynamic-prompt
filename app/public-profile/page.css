@@ -1,0 +1,17 @@
+.public-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.public-profile-details {
+    text-align: center;
+    font: 600 20px "Roboto";
+    color: rgb(60, 77, 108);
+}
+
+@media(prefers-color-scheme: dark) {
+    .public-profile-details {
+        color: rgb(137, 192, 227);
+    }
+}

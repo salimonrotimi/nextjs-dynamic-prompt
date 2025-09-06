@@ -1,0 +1,82 @@
+.modal-image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* top, left, right, bottom, create a rectangle that fill the entire screen */
+    z-index: 50;
+    /* places this modal container topmost while other containers are below it */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    /* filter to blurs the backdrop i.e. background contents */
+}
+
+.modal-content {
+    position: relative;
+    /* added since one of its child has a position of "absolute" */
+    max-width: 64rem;
+    /* 1024px. Can also be 100%. For responsiveness and centering, use only "max-width" and "max-height" 
+    whenever a "relative" position is used for a parent containers. */
+    max-height: 100vh;
+    /* Can also be 100% */
+    padding: 1rem;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    z-index: 10;
+    /* places this button topmost in the modal container while other items are below it */
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+    color: white;
+    border-radius: 50%;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-image-container {
+    position: relative;
+    /* added since one of its child (i.e. modal-user-label) has a position of "absolute" */
+}
+
+.modal-image {
+    max-width: 100%;
+    /* For responsiveness and centering, use only "max-width" and "max-height" whenever a "relative" 
+    position is used for a parent containers (i.e. modal-image-container)  */
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.modal-user-label {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 500;
+}
+
+@media(prefers-color-scheme: dark) {
+    .modal-image-modal {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
