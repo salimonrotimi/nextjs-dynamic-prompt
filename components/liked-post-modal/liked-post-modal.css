@@ -1,0 +1,147 @@
+.modal-image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* top, left, right, bottom, create a rectangle that fill the entire screen */
+    z-index: 1000;
+    /* places this modal container topmost while other containers are below it */
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 30px 0;
+    backdrop-filter: blur(4px);
+    /* filter to blurs the backdrop i.e. background contents */
+}
+
+.liked-modal-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: whitesmoke;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+    z-index: 10;
+    /* places this button topmost in the modal container while other items are below it */
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+    color: white;
+    border-radius: 50%;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.liked-modal-content {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    overflow-y: auto;
+}
+
+.like-modal-post {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+.like-modal-post-username {
+    color: rgb(3, 172, 234);
+}
+
+.like-modal-post p {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgb(222, 222, 222);
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.like-modal-post-likedby {
+    margin-top: 25px;
+    padding: 0 10px;
+}
+
+.like-modal-post-likedby span {
+    display: flex;
+    justify-content: flex-start;
+    font: 600 16px "Roboto";
+    color: white;
+}
+
+.no-likes {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(3, 172, 234);
+}
+
+.liked-modal-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.liked-modal-details-inner {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.liked-user-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.liked-user-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: rgb(11, 123, 251);
+    padding: 8px 0;
+    font-weight: 600;
+    font-family: "Roboto";
+}
+
+.liked-user-email {
+    color: whitesmoke;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.modal-post-nolike {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font: 600 15px "Roboto";
+    color: white;
+}
+
+@media(prefers-color-scheme: dark) {
+    .modal-image-modal {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}

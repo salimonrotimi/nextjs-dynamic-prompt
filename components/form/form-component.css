@@ -1,0 +1,135 @@
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 15px;
+    margin: 5px auto;
+}
+
+.form-header {
+    text-align: left;
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.form-header-span {
+    color: rgb(11, 92, 243);
+}
+
+.form-paragraph {
+    text-align: left;
+    max-width: max-content;
+    color: #656565;
+    font-family: 'Roboto';
+}
+
+.submit-form {
+    margin: 15px auto;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.submit-form label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.form-label-span {
+    font-family: 'Roboto';
+    font-weight: 600;
+    color: gray;
+}
+
+.textarea-character-count {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    color: #535353;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-textarea,
+.form-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+    border: none;
+    outline: none;
+}
+
+.form-textarea {
+    min-height: 100px;
+    resize: none;
+    /* prevent resizing of the textarea */
+}
+
+.form-input-label,
+.form-div-validate {
+    margin-top: 20px;
+}
+
+.form-div-validate {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-checkbox {
+    width: 18px;
+    height: 18px;
+}
+
+.form-div-submit {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.form-cancel,
+.form-btn {
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    padding: 3px 6px;
+    cursor: pointer;
+}
+
+.form-cancel {
+    background-color: gray;
+    color: white;
+}
+
+.form-btn {
+    background-color: rgb(11, 92, 243);
+    color: white;
+}
+
+.form-btn:disabled {
+    background-color: #6e6e6e;
+    color: white;
+}
+
+@media(prefers-color-scheme: dark) {
+    .form-paragraph,
+    .form-label-span {
+        color: rgb(137, 192, 227);
+    }
+    .form-cancel {
+        color: white;
+        background-color: #555555;
+    }
+}

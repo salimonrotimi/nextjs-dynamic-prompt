@@ -1,0 +1,277 @@
+.post-comment-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px 15px;
+    margin: 5px auto;
+}
+
+
+/* POST STYLES */
+
+.post-header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 16px;
+    font-family: "Roboto";
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-header-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid rgb(218, 218, 218);
+}
+
+.post-image {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.post-creator-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post-created-by {
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+}
+
+.post-time-creation {
+    font-size: 13px;
+    color: #545454;
+    font-weight: 600;
+}
+
+.post-record-details {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 1.4;
+    color: #535353;
+    font-weight: 600;
+}
+
+
+/* FORM STYLES */
+
+.submit-form {
+    margin: 15px auto;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.submit-form label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.form-label-span {
+    font-family: 'Roboto';
+    font-weight: 600;
+    color: rgb(11, 92, 243);
+}
+
+.textarea-character-count {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    color: #535353;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+    border: none;
+    outline: none;
+    resize: none;
+    /* prevent resizing of the textarea */
+}
+
+.form-div-validate {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-checkbox {
+    width: 18px;
+    height: 18px;
+}
+
+.form-div-submit {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.form-cancel,
+.form-btn {
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    padding: 3px 6px;
+    cursor: pointer;
+}
+
+.form-cancel {
+    background-color: gray;
+    color: white;
+}
+
+.form-btn {
+    background-color: rgb(11, 92, 243);
+    color: white;
+}
+
+.form-btn:disabled {
+    background-color: #6e6e6e;
+    color: white;
+}
+
+
+/* COMMENT STYLES */
+
+.all-comments-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.no-comments {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #535353;
+}
+
+.all-comments {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comment-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.comment-overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.comment-author {
+    font: 600 13px "Roboto";
+    color: #5c5c5c;
+    padding: 0 10px;
+}
+
+.comment-details {
+    font: 500 15px "Roboto";
+    background-color: #c5c5c5;
+    color: black;
+    padding: 4px 10px;
+    border-radius: 15px;
+}
+
+.comment-time-indicator {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.comment-time {
+    font: 600 11px "Roboto";
+    padding: 0 10px;
+    text-transform: uppercase;
+    color: #5c5c5c;
+}
+
+.comment-indicator {
+    font: 600 13px "Roboto";
+    color: #5c5c5c;
+    font-style: italic;
+}
+
+.comment-edit-delete {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font: 600 11px "Roboto";
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.comment-delete {
+    color: red;
+}
+
+.comment-edit {
+    color: green;
+}
+
+@media(prefers-color-scheme: dark) {
+    .post-created-by {
+        color: white;
+    }
+    .post-time-creation,
+    .post-record-details,
+    .textarea-character-count,
+    .comment-author,
+    .comment-time,
+    .comment-indicator {
+        color: rgb(187, 187, 187);
+    }
+    .form-paragraph,
+    .form-label-span {
+        color: rgb(137, 192, 227);
+    }
+    .form-cancel {
+        color: white;
+        background-color: #555555;
+    }
+    .comment-delete {
+        color: rgb(255, 90, 61);
+        font-weight: 600;
+    }
+    .comment-edit {
+        color: rgb(17, 220, 17);
+        font-weight: 600;
+    }
+}

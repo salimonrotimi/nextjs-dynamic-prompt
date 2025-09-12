@@ -1,0 +1,196 @@
+/* Tailwind css is not used here*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 15px 30px;
+    background-color: rgb(170, 171, 176);
+}
+
+.navbar-logo {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navbar-image {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.navbar-logo p {
+    margin-top: 2px;
+}
+
+.navbar-login-logout {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu-icon {
+    display: none;
+    /* hides the menu */
+}
+
+.navbar-logout,
+.navbar-home-login {
+    display: flex;
+    /* shows the menu items */
+    gap: 15px;
+}
+
+.create-post,
+.logout,
+.login,
+.home-link {
+    display: flex;
+    align-items: center;
+    padding: 3px 10px;
+    background-color: #515151;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.logout,
+.login {
+    background-color: white;
+    color: #272727;
+    font-weight: 600;
+}
+
+.logout:hover,
+.login:hover {
+    background-color: gray;
+    color: white;
+}
+
+.create-post:hover,
+.home-link:hover {
+    background-color: white;
+    color: black;
+}
+
+.navbar-user-profile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 2px 5px 2px 8px;
+    font-weight: 600;
+}
+
+.navbar-user-profile:hover {
+    background-color: #838383;
+    color: white;
+}
+
+.navbar-profile-image {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: contain;
+    /* or cover */
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+    .navbar-logo {
+        font-size: 16px;
+    }
+    .navbar-logout {
+        display: flex;
+        gap: 10px;
+    }
+    .create-post,
+    .logout,
+    .login,
+    .home-link {
+        padding: 2px 5px;
+        font-size: 14px;
+    }
+    .navbar-user-profile {
+        padding: 2px 5px 2px 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        padding: 15px;
+    }
+    .navbar-logo {
+        font-size: 15px;
+    }
+    .navbar-login-logout {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .navbar-menu-icon {
+        display: flex;
+        /* shows the menu */
+    }
+    .navbar-logout {
+        display: none;
+        /* hides the menu items */
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        width: 150px;
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        position: absolute;
+        top: 50px;
+    }
+    .navbar-logout-toggle {
+        display: flex;
+        /* shows the menu items by toggling using the toggleMenu() function */
+    }
+    .navbar-home-login {
+        gap: 10px;
+    }
+    .create-post,
+    .logout,
+    .login,
+    .home-link {
+        padding: 2px 5px;
+        font-size: 12px;
+    }
+    .create-post,
+    .logout {
+        width: 134px;
+        justify-content: center;
+    }
+    .navbar-user-profile {
+        padding: 2px 4px 2px 6px;
+        justify-content: flex-end;
+        gap: 20px;
+        font-size: 12px;
+        width: 134px;
+    }
+    .navbar-profile-image {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media(prefers-color-scheme: dark) {}

@@ -1,0 +1,50 @@
+.feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px auto 25px;
+    padding: 10px 5px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.feed-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.feed-form-search {
+    width: 90%;
+    max-width: 400px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    color: black;
+}
+
+.feed-no-result {
+    font-family: "Roboto";
+    color: rgb(218, 86, 4);
+    font-weight: 600;
+    margin: 0 auto;
+    padding: 0 14px;
+}
+
+.feed-posts {
+    margin-top: 30px;
+    font: 800 27px "Roboto";
+    /* font-weight font-size font-family*/
+    color: rgb(72, 71, 71);
+}
+
+@media (prefers-color-scheme: dark) {
+    .feed-posts {
+        color: white;
+    }
+}

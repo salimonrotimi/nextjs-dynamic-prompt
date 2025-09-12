@@ -1,0 +1,191 @@
+/* For responsive design, width is for small screen, max-width is for large screen */
+
+.prompt-card-container {
+    width: 100%;
+}
+
+.prompt-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 600;
+    padding: 18px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Glassy background. Alpha 0.1 is very transparent */
+    color: #454545;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 32px 2px rgba(0, 0, 0, 0.1);
+    /* x-offset y=offset blur spread color */
+    backdrop-filter: blur(5px);
+    /* For blurring the content at the background */
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.prompt-card-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.prompt-card-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.prompt-card-creator {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.prompt-card-creator div {
+    font-size: 15px;
+}
+
+.prompt-card-creator p {
+    font-size: 13px;
+    color: #878787;
+}
+
+.prompt-card-copy {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.prompt-card-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.prompt-card-prompt {
+    text-align: left;
+    color: rgb(60, 77, 108)
+}
+
+.prompt-card-tag {
+    text-align: left;
+    color: gray;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.prompt-card-all {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.prompt-card-edit-delete {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.prompt-card-comment-like {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.prompt-card-edit,
+.prompt-card-delete {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+}
+
+.prompt-card-edit span {
+    margin-top: 2px;
+    color: rgb(61, 151, 61);
+}
+
+.prompt-card-delete span {
+    margin-top: 2px;
+    color: rgb(165, 1, 1);
+}
+
+.prompt-card-comment,
+.prompt-card-like {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.comment {
+    color: #3b82f6;
+    display: flex;
+    align-items: center;
+    gap: 2px
+}
+
+.like {
+    color: #ef4444;
+    display: flex;
+    align-items: center;
+    gap: 2px
+}
+
+.like-view {
+    color: #ef4444;
+}
+
+
+/* Change color fill for SVG */
+
+svg {
+    width: 18px;
+    height: auto;
+}
+
+.prompt-card-comment-icon {
+    color: #3b82f6;
+    /* Blue */
+}
+
+.prompt-card-like-icon {
+    color: #ef4444;
+    /* Red */
+    transition: color 0.2s ease;
+}
+
+.prompt-card-like-icon:hover {
+    color: red;
+    /* Darker red on hover */
+}
+
+
+/* Fill the heart when liked */
+
+.prompt-card-like-icon.liked {
+    fill: currentColor;
+}
+
+@media(prefers-color-scheme: dark) {
+    .prompt-card-creator div {
+        color: #aa6c39
+    }
+    .prompt-card-prompt {
+        color: rgb(137, 192, 227);
+    }
+    .prompt-card-delete p {
+        margin-top: 2px;
+        color: rgb(241, 68, 0);
+    }
+    .format-time {
+        color: rgb(137, 192, 227);
+    }
+}

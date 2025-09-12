@@ -1,0 +1,64 @@
+/*
+@import url("https://fonts.googleapis.com/css2?family=inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset all elements */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --BACKGROUND: rgb(218, 218, 218);
+    --FOREGROUND: #171717;
+}
+
+
+/* For dark screen mode */
+
+@media (prefers-color-scheme: dark) {
+     :root {
+        --BACKGROUND: #0a0a0a;
+        --FOREGROUND: #ededed;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--FOREGROUND);
+    background: var(--BACKGROUND);
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.app {
+    color: blue;
+}
+
+.gradient {
+    background-color: bisque;
+    background-repeat: repeat;
+    width: 100%;
+}
+
+
+/* MOBILE DEVICE LANDSCAPE */
+
+@media (max-height: 425px) and (min-aspect-ratio: 7/4) {
+     :root {
+        background: #e7e8e9;
+        background-image: radial-gradient(var(--BACKGROUND), var(--BACKGROUND));
+    }
+    h2,
+    h3 {
+        font-size: 1.5rem;
+    }
+}

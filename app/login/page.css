@@ -1,0 +1,139 @@
+.session-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.session-sign-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    margin: 100px auto;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #27233b;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+}
+
+.session-sign-in div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.session-sign-in h3,
+.session-paragraph p {
+    color: blue;
+}
+
+.session-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.session-paragraph p span {
+    color: #dc3545;
+    font-weight: 700;
+}
+
+.session-signout-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sign-in {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin: 150px auto;
+}
+
+.sign-in-method {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: rgba(255, 255, 255, 0.8);
+}
+
+.sign-in-method h2 {
+    font-size: 20px;
+    color: black;
+    font-weight: 700;
+}
+
+.sign-in-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.github-btn {
+    background-color: #333;
+    color: white;
+}
+
+.google-btn {
+    background-color: white;
+    color: #000;
+}
+
+@media (max-width: 500px) {
+    .sign-in-method h2 {
+        font-size: 16px;
+    }
+    .sign-in-btn {
+        font-size: 13px;
+    }
+}
+
+@media(prefers-color-scheme: dark) {
+    .session-status {
+        color: #ed8f42;
+    }
+    .session-sign-in {
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+    .sign-in-method {
+        background-color: rgb(170, 171, 176);
+    }
+    .sign-in-method h2 {
+        color: rgb(52, 52, 52);
+    }
+    .session-sign-in h3,
+    .session-paragraph p {
+        color: rgb(1, 74, 245);
+        font-weight: 600;
+    }
+    .session-paragraph p span {
+        color: black;
+    }
+    .session-signout-btn {
+        background-color: rgb(1, 74, 245);
+    }
+}
