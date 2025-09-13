@@ -139,9 +139,3 @@
     font: 600 15px "Roboto";
     color: white;
 }
-
-@media(prefers-color-scheme: dark) {
-    .modal-image-modal {
-        background-color: rgba(255, 255, 255, 0.5);
-    }
-}
